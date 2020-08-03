@@ -1,0 +1,116 @@
+\hypertarget{client_8h}{\section{C\-L\-I\-E\-N\-T/client.h File Reference}
+\label{client_8h}\index{C\-L\-I\-E\-N\-T/client.\-h@{C\-L\-I\-E\-N\-T/client.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$netdb.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\-h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$sys/epoll.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}../\-C\-O\-M\-M\-O\-N/common.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structclient__s}{client\-\_\-s}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{client_8h_a12e206ea6e876348fe14621d2a2dd741}{\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{client_8h_aae114cdd7784a59af222f175dac6312b}{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}~1024
+\item 
+\#define \hyperlink{client_8h_a45ba202b05caf39795aeca91b0ae547e}{T\-I\-M\-E\-O\-U\-T}~10000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structclient__s}{client\-\_\-s} \hyperlink{client_8h_a7bfebc8e763f36d1870198931d6b5eb1}{client\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structclient__t}{client\-\_\-t} $\ast$ \hyperlink{client_8h_af21475138048fb4203362940473e97ee}{client\-\_\-init} ()
+\item 
+void \hyperlink{client_8h_a78c6ed6e74b3ce44da9950931b7d1381}{client\-\_\-destroy} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
+\begin{DoxyCompactList}\small\item\em client 객체를 삭제하는 함수 \end{DoxyCompactList}\item 
+int \hyperlink{client_8h_ab43410571f3895d3a5f6a65822e47f8c}{client\-\_\-process} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{client_8h_a12e206ea6e876348fe14621d2a2dd741}{\index{client.\-h@{client.\-h}!\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-@{\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-@{\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-}!client.h@{client.\-h}}
+\subsubsection[{\-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-H\-\_\-\-\_\-}}\label{client_8h_a12e206ea6e876348fe14621d2a2dd741}
+
+
+Definition at line 3 of file client.\-h.
+
+\hypertarget{client_8h_aae114cdd7784a59af222f175dac6312b}{\index{client.\-h@{client.\-h}!B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N@{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}}
+\index{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N@{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}!client.h@{client.\-h}}
+\subsubsection[{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N~1024}}\label{client_8h_aae114cdd7784a59af222f175dac6312b}
+
+
+Definition at line 21 of file client.\-h.
+
+\hypertarget{client_8h_a45ba202b05caf39795aeca91b0ae547e}{\index{client.\-h@{client.\-h}!T\-I\-M\-E\-O\-U\-T@{T\-I\-M\-E\-O\-U\-T}}
+\index{T\-I\-M\-E\-O\-U\-T@{T\-I\-M\-E\-O\-U\-T}!client.h@{client.\-h}}
+\subsubsection[{T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-M\-E\-O\-U\-T~10000}}\label{client_8h_a45ba202b05caf39795aeca91b0ae547e}
+
+
+Definition at line 22 of file client.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{client_8h_a7bfebc8e763f36d1870198931d6b5eb1}{\index{client.\-h@{client.\-h}!client\-\_\-t@{client\-\_\-t}}
+\index{client\-\_\-t@{client\-\_\-t}!client.h@{client.\-h}}
+\subsubsection[{client\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf client\-\_\-s} {\bf client\-\_\-t}}}\label{client_8h_a7bfebc8e763f36d1870198931d6b5eb1}
+
+
+Definition at line 26 of file client.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{client_8h_a78c6ed6e74b3ce44da9950931b7d1381}{\index{client.\-h@{client.\-h}!client\-\_\-destroy@{client\-\_\-destroy}}
+\index{client\-\_\-destroy@{client\-\_\-destroy}!client.h@{client.\-h}}
+\subsubsection[{client\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void client\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf client\-\_\-t} $\ast$}]{client}
+\end{DoxyParamCaption}
+)}}\label{client_8h_a78c6ed6e74b3ce44da9950931b7d1381}
+
+
+client 객체를 삭제하는 함수 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & 삭제할 client 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 135 of file client.\-c.
+
+\hypertarget{client_8h_af21475138048fb4203362940473e97ee}{\index{client.\-h@{client.\-h}!client\-\_\-init@{client\-\_\-init}}
+\index{client\-\_\-init@{client\-\_\-init}!client.h@{client.\-h}}
+\subsubsection[{client\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf client\-\_\-t}$\ast$ client\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{client_8h_af21475138048fb4203362940473e97ee}
+\hypertarget{client_8h_ab43410571f3895d3a5f6a65822e47f8c}{\index{client.\-h@{client.\-h}!client\-\_\-process@{client\-\_\-process}}
+\index{client\-\_\-process@{client\-\_\-process}!client.h@{client.\-h}}
+\subsubsection[{client\-\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}int client\-\_\-process (
+\begin{DoxyParamCaption}
+\item[{{\bf client\-\_\-t} $\ast$}]{client}
+\end{DoxyParamCaption}
+)}}\label{client_8h_ab43410571f3895d3a5f6a65822e47f8c}

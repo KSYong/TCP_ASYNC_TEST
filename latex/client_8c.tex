@@ -1,0 +1,170 @@
+\hypertarget{client_8c}{\section{C\-L\-I\-E\-N\-T/client.c File Reference}
+\label{client_8c}\index{C\-L\-I\-E\-N\-T/client.\-c@{C\-L\-I\-E\-N\-T/client.\-c}}
+}
+{\ttfamily \#include \char`\"{}client.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{client_8c_a2d85dd2fe45f4f57f0e4d1a1b150ed7a}{client\-\_\-set\-\_\-fd\-\_\-nonblock} (int fd)
+\begin{DoxyCompactList}\small\item\em file descriptor를 block되지 않게(비동기로) 설정하는 함수 \end{DoxyCompactList}\item 
+static int \hyperlink{client_8c_ac61f0ba89234ccaf801bd6792d912714}{client\-\_\-check\-\_\-fd} (int fd)
+\begin{DoxyCompactList}\small\item\em src file descriptor가 연결되어 있는지 확인 \end{DoxyCompactList}\item 
+\hyperlink{structclient__t}{client\-\_\-t} $\ast$ \hyperlink{client_8c_a0e2f6e89666d4354352c6ea76499a8b5}{client\-\_\-init} (char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em client 객체를 생성하고 초기화하는 함수 \end{DoxyCompactList}\item 
+void \hyperlink{client_8c_a78c6ed6e74b3ce44da9950931b7d1381}{client\-\_\-destroy} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
+\begin{DoxyCompactList}\small\item\em client 객체를 삭제하는 함수 \end{DoxyCompactList}\item 
+int \hyperlink{client_8c_ad4090a507b0e578c1a7c4238721e5b49}{client\-\_\-process\-\_\-data} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
+\begin{DoxyCompactList}\small\item\em server로 요청을 보내서 응답을 받는 함수 \end{DoxyCompactList}\item 
+int \hyperlink{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{client_8c_aacccc8ccb119dbbedc790f454228ae96}{is\-\_\-finish} = false
+\item 
+static int \hyperlink{client_8c_a47cbb52f2f97a96e635e9588be8c6307}{is\-\_\-error} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{client_8c_ac61f0ba89234ccaf801bd6792d912714}{\index{client.\-c@{client.\-c}!client\-\_\-check\-\_\-fd@{client\-\_\-check\-\_\-fd}}
+\index{client\-\_\-check\-\_\-fd@{client\-\_\-check\-\_\-fd}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-check\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}static int client\-\_\-check\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_ac61f0ba89234ccaf801bd6792d912714}
+
+
+src file descriptor가 연결되어 있는지 확인 
+
+\begin{DoxyReturn}{Returns}
+정상 연결되어 있으면 N\-O\-R\-M\-A\-L, 비정상 연결이면 F\-D\-\_\-\-E\-R\-R 반환 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 연결을 확인할 file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file client.\-c.
+
+\hypertarget{client_8c_a78c6ed6e74b3ce44da9950931b7d1381}{\index{client.\-c@{client.\-c}!client\-\_\-destroy@{client\-\_\-destroy}}
+\index{client\-\_\-destroy@{client\-\_\-destroy}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void client\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf client\-\_\-t} $\ast$}]{client}
+\end{DoxyParamCaption}
+)}}\label{client_8c_a78c6ed6e74b3ce44da9950931b7d1381}
+
+
+client 객체를 삭제하는 함수 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & 삭제할 client 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 135 of file client.\-c.
+
+\hypertarget{client_8c_a0e2f6e89666d4354352c6ea76499a8b5}{\index{client.\-c@{client.\-c}!client\-\_\-init@{client\-\_\-init}}
+\index{client\-\_\-init@{client\-\_\-init}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf client\-\_\-t} $\ast$ client\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{client_8c_a0e2f6e89666d4354352c6ea76499a8b5}
+
+
+client 객체를 생성하고 초기화하는 함수 
+
+\begin{DoxyReturn}{Returns}
+생성된 client 객체 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em argv} & 서버의 ip / port 정보 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file client.\-c.
+
+\hypertarget{client_8c_ad4090a507b0e578c1a7c4238721e5b49}{\index{client.\-c@{client.\-c}!client\-\_\-process\-\_\-data@{client\-\_\-process\-\_\-data}}
+\index{client\-\_\-process\-\_\-data@{client\-\_\-process\-\_\-data}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-process\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int client\-\_\-process\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf client\-\_\-t} $\ast$}]{client}
+\end{DoxyParamCaption}
+)}}\label{client_8c_ad4090a507b0e578c1a7c4238721e5b49}
+
+
+server로 요청을 보내서 응답을 받는 함수 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em client} & 요청을 하기 위한 client 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 149 of file client.\-c.
+
+\hypertarget{client_8c_a2d85dd2fe45f4f57f0e4d1a1b150ed7a}{\index{client.\-c@{client.\-c}!client\-\_\-set\-\_\-fd\-\_\-nonblock@{client\-\_\-set\-\_\-fd\-\_\-nonblock}}
+\index{client\-\_\-set\-\_\-fd\-\_\-nonblock@{client\-\_\-set\-\_\-fd\-\_\-nonblock}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-set\-\_\-fd\-\_\-nonblock}]{\setlength{\rightskip}{0pt plus 5cm}static int client\-\_\-set\-\_\-fd\-\_\-nonblock (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_a2d85dd2fe45f4f57f0e4d1a1b150ed7a}
+
+
+file descriptor를 block되지 않게(비동기로) 설정하는 함수 
+
+\begin{DoxyReturn}{Returns}
+정상적으로 설정되면 N\-O\-R\-M\-A\-L, 비정상적이면 F\-D\-\_\-\-E\-R\-R 반환 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 확인할 client file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file client.\-c.
+
+\hypertarget{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{client.\-c@{client.\-c}!main@{main}}
+\index{main@{main}!client.c@{client.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Definition at line 233 of file client.\-c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{client_8c_a47cbb52f2f97a96e635e9588be8c6307}{\index{client.\-c@{client.\-c}!is\-\_\-error@{is\-\_\-error}}
+\index{is\-\_\-error@{is\-\_\-error}!client.c@{client.\-c}}
+\subsubsection[{is\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-error = false\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_a47cbb52f2f97a96e635e9588be8c6307}
+
+
+Definition at line 4 of file client.\-c.
+
+\hypertarget{client_8c_aacccc8ccb119dbbedc790f454228ae96}{\index{client.\-c@{client.\-c}!is\-\_\-finish@{is\-\_\-finish}}
+\index{is\-\_\-finish@{is\-\_\-finish}!client.c@{client.\-c}}
+\subsubsection[{is\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-finish = false\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_aacccc8ccb119dbbedc790f454228ae96}
+
+
+Definition at line 3 of file client.\-c.
+

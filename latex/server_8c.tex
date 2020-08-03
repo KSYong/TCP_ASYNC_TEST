@@ -1,0 +1,227 @@
+\hypertarget{server_8c}{\section{S\-E\-R\-V\-E\-R/server.c File Reference}
+\label{server_8c}\index{S\-E\-R\-V\-E\-R/server.\-c@{S\-E\-R\-V\-E\-R/server.\-c}}
+}
+{\ttfamily \#include \char`\"{}server.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{server_8c_af12fdbdbdf6c6317fcb3ad39f7f18ae9}{server\-\_\-set\-\_\-fd\-\_\-nonblock} (int fd)
+\begin{DoxyCompactList}\small\item\em file descriptor를 block되지 않게(비동기로) 설정하는 함수 \end{DoxyCompactList}\item 
+static int \hyperlink{server_8c_a3b4132d66fe79d7ef9c255c7290e03ba}{server\-\_\-check\-\_\-fd} (int fd)
+\begin{DoxyCompactList}\small\item\em src file descriptor가 연결되어 있는지 확인 \end{DoxyCompactList}\item 
+static int \hyperlink{server_8c_af8c24ee00f1295fb4e099c03c1470e73}{server\-\_\-process\-\_\-data} (\hyperlink{structserver__t}{server\-\_\-t} $\ast$server, int fd)
+\begin{DoxyCompactList}\small\item\em Server가 Client로 데이터를 보낼 때, Server에서 메시지 송수신을 처리하기 위한 함수 \end{DoxyCompactList}\item 
+\hyperlink{structserver__t}{server\-\_\-t} $\ast$ \hyperlink{server_8c_a326fafe4198481223d2abb46ed9ccadb}{server\-\_\-init} (char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em server 객체를 생성하고 초기화하는 함수 \end{DoxyCompactList}\item 
+void \hyperlink{server_8c_a247d4c50ac76fb272765ba165fd5dba5}{server\-\_\-destroy} (\hyperlink{structserver__t}{server\-\_\-t} $\ast$server)
+\begin{DoxyCompactList}\small\item\em server 객체를 삭제하기 위한 함수 \end{DoxyCompactList}\item 
+int \hyperlink{server_8c_a7fc8deb0531c1fb93fa54e3ce66c885e}{server\-\_\-conn} (\hyperlink{structserver__t}{server\-\_\-t} $\ast$server)
+\begin{DoxyCompactList}\small\item\em client와 연결되었을 때 데이터를 수신하고 데이터를 처리하기 위한 함수 \end{DoxyCompactList}\item 
+int \hyperlink{server_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em server 구동을 위한 main 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{server_8c_aacccc8ccb119dbbedc790f454228ae96}{is\-\_\-finish} = false
+\item 
+static int \hyperlink{server_8c_a47cbb52f2f97a96e635e9588be8c6307}{is\-\_\-error} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{server_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{server.\-c@{server.\-c}!main@{main}}
+\index{main@{main}!server.c@{server.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{server_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+server 구동을 위한 main 함수 
+
+client 구동을 위한 main 함수
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 매개변수 개수 \\
+\hline
+{\em argv} & ip / 포트번호\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 매개변수 개수 \\
+\hline
+{\em argv} & 서버의 ip와 포트 정보 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 296 of file server.\-c.
+
+\hypertarget{server_8c_a3b4132d66fe79d7ef9c255c7290e03ba}{\index{server.\-c@{server.\-c}!server\-\_\-check\-\_\-fd@{server\-\_\-check\-\_\-fd}}
+\index{server\-\_\-check\-\_\-fd@{server\-\_\-check\-\_\-fd}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-check\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}static int server\-\_\-check\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_a3b4132d66fe79d7ef9c255c7290e03ba}
+
+
+src file descriptor가 연결되어 있는지 확인 
+
+\begin{DoxyReturn}{Returns}
+정상 연결되어 있으면 N\-O\-R\-M\-A\-L, 비정상 연결이면 F\-D\-\_\-\-E\-R\-R 반환 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 연결을 확인할 file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file server.\-c.
+
+\hypertarget{server_8c_a7fc8deb0531c1fb93fa54e3ce66c885e}{\index{server.\-c@{server.\-c}!server\-\_\-conn@{server\-\_\-conn}}
+\index{server\-\_\-conn@{server\-\_\-conn}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-conn}]{\setlength{\rightskip}{0pt plus 5cm}int server\-\_\-conn (
+\begin{DoxyParamCaption}
+\item[{{\bf server\-\_\-t} $\ast$}]{server}
+\end{DoxyParamCaption}
+)}}\label{server_8c_a7fc8deb0531c1fb93fa54e3ce66c885e}
+
+
+client와 연결되었을 때 데이터를 수신하고 데이터를 처리하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+client와 정상 연결 여부 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & 데이터 처리를 위한 server 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 241 of file server.\-c.
+
+\hypertarget{server_8c_a247d4c50ac76fb272765ba165fd5dba5}{\index{server.\-c@{server.\-c}!server\-\_\-destroy@{server\-\_\-destroy}}
+\index{server\-\_\-destroy@{server\-\_\-destroy}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void server\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf server\-\_\-t} $\ast$}]{server}
+\end{DoxyParamCaption}
+)}}\label{server_8c_a247d4c50ac76fb272765ba165fd5dba5}
+
+
+server 객체를 삭제하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & 삭제하려는 server 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 220 of file server.\-c.
+
+\hypertarget{server_8c_a326fafe4198481223d2abb46ed9ccadb}{\index{server.\-c@{server.\-c}!server\-\_\-init@{server\-\_\-init}}
+\index{server\-\_\-init@{server\-\_\-init}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf server\-\_\-t} $\ast$ server\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{server_8c_a326fafe4198481223d2abb46ed9ccadb}
+
+
+server 객체를 생성하고 초기화하는 함수 
+
+\begin{DoxyReturn}{Returns}
+생성된 server 객체 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$$\ast$argv} & I\-P와 P\-O\-R\-T 정보 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 133 of file server.\-c.
+
+\hypertarget{server_8c_af8c24ee00f1295fb4e099c03c1470e73}{\index{server.\-c@{server.\-c}!server\-\_\-process\-\_\-data@{server\-\_\-process\-\_\-data}}
+\index{server\-\_\-process\-\_\-data@{server\-\_\-process\-\_\-data}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-process\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static int server\-\_\-process\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf server\-\_\-t} $\ast$}]{server, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_af8c24ee00f1295fb4e099c03c1470e73}
+
+
+Server가 Client로 데이터를 보낼 때, Server에서 메시지 송수신을 처리하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+열거형 참고 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & 서버의 정보를 담고 있는 \hyperlink{structserver__t}{server\-\_\-t} 구조체 객체 \\
+\hline
+{\em fd} & 연결된 client file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file server.\-c.
+
+\hypertarget{server_8c_af12fdbdbdf6c6317fcb3ad39f7f18ae9}{\index{server.\-c@{server.\-c}!server\-\_\-set\-\_\-fd\-\_\-nonblock@{server\-\_\-set\-\_\-fd\-\_\-nonblock}}
+\index{server\-\_\-set\-\_\-fd\-\_\-nonblock@{server\-\_\-set\-\_\-fd\-\_\-nonblock}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-set\-\_\-fd\-\_\-nonblock}]{\setlength{\rightskip}{0pt plus 5cm}static int server\-\_\-set\-\_\-fd\-\_\-nonblock (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_af12fdbdbdf6c6317fcb3ad39f7f18ae9}
+
+
+file descriptor를 block되지 않게(비동기로) 설정하는 함수 
+
+\begin{DoxyReturn}{Returns}
+정상적으로 설정되면 N\-O\-R\-M\-A\-L, 비정상적이면 F\-D\-\_\-\-E\-R\-R 반환 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 확인할 server file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file server.\-c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{server_8c_a47cbb52f2f97a96e635e9588be8c6307}{\index{server.\-c@{server.\-c}!is\-\_\-error@{is\-\_\-error}}
+\index{is\-\_\-error@{is\-\_\-error}!server.c@{server.\-c}}
+\subsubsection[{is\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-error = false\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_a47cbb52f2f97a96e635e9588be8c6307}
+
+
+Definition at line 20 of file server.\-c.
+
+\hypertarget{server_8c_aacccc8ccb119dbbedc790f454228ae96}{\index{server.\-c@{server.\-c}!is\-\_\-finish@{is\-\_\-finish}}
+\index{is\-\_\-finish@{is\-\_\-finish}!server.c@{server.\-c}}
+\subsubsection[{is\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-finish = false\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_aacccc8ccb119dbbedc790f454228ae96}
+
+
+Definition at line 19 of file server.\-c.
+
