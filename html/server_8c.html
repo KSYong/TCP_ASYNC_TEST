@@ -98,6 +98,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aaf124842c1334e95cd4d522df6c475e9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#aaf124842c1334e95cd4d522df6c475e9">server_transc_clear</a> (<a class="el" href="structtransc__t.html">transc_t</a> *transc)</td></tr>
+<tr class="memdesc:aaf124842c1334e95cd4d522df6c475e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">transc 구조체 객체를 초기화하는 함수  <a href="#aaf124842c1334e95cd4d522df6c475e9">More...</a><br/></td></tr>
+<tr class="separator:aaf124842c1334e95cd4d522df6c475e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3369df2cc5d1f5f11b41d93a7b8ef0df"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a3369df2cc5d1f5f11b41d93a7b8ef0df">server_transc_get_msg_length</a> (<a class="el" href="structtransc__t.html">transc_t</a> *transc)</td></tr>
+<tr class="memdesc:a3369df2cc5d1f5f11b41d93a7b8ef0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">전달받은 메시지를 일부만 decode해서 메시지의 총 길이(Header + Body)를 구하는 함수  <a href="#a3369df2cc5d1f5f11b41d93a7b8ef0df">More...</a><br/></td></tr>
+<tr class="separator:a3369df2cc5d1f5f11b41d93a7b8ef0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ec3aa2518356314d69132e819d02fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#ae8ec3aa2518356314d69132e819d02fa">server_recv_data</a> (<a class="el" href="structtransc__t.html">transc_t</a> *transc, int fd)</td></tr>
+<tr class="memdesc:ae8ec3aa2518356314d69132e819d02fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">client 가 server로 데이터를 보낼 때, server에서 user copy로 수신하기 위한 함수  <a href="#ae8ec3aa2518356314d69132e819d02fa">More...</a><br/></td></tr>
+<tr class="separator:ae8ec3aa2518356314d69132e819d02fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25f5213cda8c42c84425283c8b7f159"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#af25f5213cda8c42c84425283c8b7f159">server_send_data</a> (<a class="el" href="structtransc__t.html">transc_t</a> *transc, int fd)</td></tr>
+<tr class="memdesc:af25f5213cda8c42c84425283c8b7f159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server가 Client로 데이터를 보낼 때, Server 에서 zero copy로 송신하기 위한 함수  <a href="#af25f5213cda8c42c84425283c8b7f159">More...</a><br/></td></tr>
+<tr class="separator:af25f5213cda8c42c84425283c8b7f159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af12fdbdbdf6c6317fcb3ad39f7f18ae9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#af12fdbdbdf6c6317fcb3ad39f7f18ae9">server_set_fd_nonblock</a> (int fd)</td></tr>
 <tr class="memdesc:af12fdbdbdf6c6317fcb3ad39f7f18ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">file descriptor를 block되지 않게(비동기로) 설정하는 함수  <a href="#af12fdbdbdf6c6317fcb3ad39f7f18ae9">More...</a><br/></td></tr>
 <tr class="separator:af12fdbdbdf6c6317fcb3ad39f7f18ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,6 +119,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af8c24ee00f1295fb4e099c03c1470e73"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#af8c24ee00f1295fb4e099c03c1470e73">server_process_data</a> (<a class="el" href="structserver__t.html">server_t</a> *server, int fd)</td></tr>
 <tr class="memdesc:af8c24ee00f1295fb4e099c03c1470e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server가 Client로 데이터를 보낼 때, Server에서 메시지 송수신을 처리하기 위한 함수  <a href="#af8c24ee00f1295fb4e099c03c1470e73">More...</a><br/></td></tr>
 <tr class="separator:af8c24ee00f1295fb4e099c03c1470e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa542370d5789189df5c407e0f4c5ff6f"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#aa542370d5789189df5c407e0f4c5ff6f">server_detect_finish</a> (void *data)</td></tr>
+<tr class="memdesc:aa542370d5789189df5c407e0f4c5ff6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server에서 사용하는 메모리를 해제하기 위한 함수  <a href="#aa542370d5789189df5c407e0f4c5ff6f">More...</a><br/></td></tr>
+<tr class="separator:aa542370d5789189df5c407e0f4c5ff6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a326fafe4198481223d2abb46ed9ccadb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structserver__t.html">server_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a326fafe4198481223d2abb46ed9ccadb">server_init</a> (char **argv)</td></tr>
 <tr class="memdesc:a326fafe4198481223d2abb46ed9ccadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">server 객체를 생성하고 초기화하는 함수  <a href="#a326fafe4198481223d2abb46ed9ccadb">More...</a><br/></td></tr>
 <tr class="separator:a326fafe4198481223d2abb46ed9ccadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +186,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00282">282</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00620">620</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -206,7 +221,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00038">38</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00317">317</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -233,7 +248,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00227">227</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00547">547</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -260,7 +275,42 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00206">206</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00526">526</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa542370d5789189df5c407e0f4c5ff6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void * server_detect_finish </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Server에서 사용하는 메모리를 해제하기 위한 함수 </p>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Thread 매개변수, 현재 사용되는(할당된) Server 객체 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="server_8c_source.html#l00406">406</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -287,7 +337,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00119">119</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00430">430</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -333,7 +383,99 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="server_8c_source.html#l00054">54</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+<p>Definition at line <a class="el" href="server_8c_source.html#l00333">333</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8ec3aa2518356314d69132e819d02fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int server_recv_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtransc__t.html">transc_t</a> *&#160;</td>
+          <td class="paramname"><em>transc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>client 가 server로 데이터를 보낼 때, server에서 user copy로 수신하기 위한 함수 </p>
+<dl class="section return"><dt>Returns</dt><dd>열거형 참고 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transc</td><td>user copy 처리를 위한 <a class="el" href="structtransc__t.html" title="server에서 user buffer 관리를 위한 구조체 ">transc_t</a> 객체 </td></tr>
+    <tr><td class="paramname">fd</td><td>연결된 client file descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="server_8c_source.html#l00074">74</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af25f5213cda8c42c84425283c8b7f159"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int server_send_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtransc__t.html">transc_t</a> *&#160;</td>
+          <td class="paramname"><em>transc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Server가 Client로 데이터를 보낼 때, Server 에서 zero copy로 송신하기 위한 함수 </p>
+<dl class="section return"><dt>Returns</dt><dd>열거형 참고 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transc</td><td>user copy 처리를 위한 <a class="el" href="structtransc__t.html" title="server에서 user buffer 관리를 위한 구조체 ">transc_t</a> 객체 </td></tr>
+    <tr><td class="paramname">fd</td><td>연결된 client file descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="server_8c_source.html#l00189">189</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>
@@ -368,7 +510,77 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="server_8c_source.html#l00295">295</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf124842c1334e95cd4d522df6c475e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void server_transc_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtransc__t.html">transc_t</a> *&#160;</td>
+          <td class="paramname"><em>transc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>transc 구조체 객체를 초기화하는 함수 </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transc</td><td>초기화하기 위한 <a class="el" href="structtransc__t.html" title="server에서 user buffer 관리를 위한 구조체 ">transc_t</a> 구조체 변수 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="server_8c_source.html#l00016">16</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3369df2cc5d1f5f11b41d93a7b8ef0df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t server_transc_get_msg_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtransc__t.html">transc_t</a> *&#160;</td>
+          <td class="paramname"><em>transc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>전달받은 메시지를 일부만 decode해서 메시지의 총 길이(Header + Body)를 구하는 함수 </p>
+<dl class="section return"><dt>Returns</dt><dd>메시지 길이 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transc</td><td>메시지의 길이를 구하기 위한 <a class="el" href="structtransc__t.html" title="server에서 user buffer 관리를 위한 구조체 ">transc_t</a> 구조체 변수 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="server_8c_source.html#l00037">37</a> of file <a class="el" href="server_8c_source.html">server.c</a>.</p>
 
 </div>
 </div>

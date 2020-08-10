@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="client_8h_source.html">client.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="kmp_8h_source.html">kmp.h</a>&quot;</code><br/>
 </div>
 <p><a href="client_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,6 +114,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ad4090a507b0e578c1a7c4238721e5b49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ad4090a507b0e578c1a7c4238721e5b49">client_process_data</a> (<a class="el" href="structclient__t.html">client_t</a> *client)</td></tr>
 <tr class="memdesc:ad4090a507b0e578c1a7c4238721e5b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">server로 요청을 보내서 응답을 받는 함수  <a href="#ad4090a507b0e578c1a7c4238721e5b49">More...</a><br/></td></tr>
 <tr class="separator:ad4090a507b0e578c1a7c4238721e5b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac250e5300baf1d8be6312f9706cfb939"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ac250e5300baf1d8be6312f9706cfb939">client_conn</a> (<a class="el" href="structclient__t.html">client_t</a> *client)</td></tr>
+<tr class="separator:ac250e5300baf1d8be6312f9706cfb939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -155,7 +158,25 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00036">36</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00037">37</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac250e5300baf1d8be6312f9706cfb939"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int client_conn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structclient__t.html">client_t</a> *&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="client_8c_source.html#l00238">238</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -181,7 +202,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00135">135</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00143">143</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -208,7 +229,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00053">53</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00054">54</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -235,7 +256,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00149">149</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00157">157</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -270,7 +291,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00014">14</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00015">15</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -298,7 +319,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00233">233</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00298">298</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -321,7 +342,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00004">4</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00005">5</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>
@@ -343,7 +364,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="client_8c_source.html#l00003">3</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
+<p>Definition at line <a class="el" href="client_8c_source.html#l00004">4</a> of file <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
 </div>
 </div>

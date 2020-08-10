@@ -2,6 +2,7 @@
 \label{client_8c}\index{C\-L\-I\-E\-N\-T/client.\-c@{C\-L\-I\-E\-N\-T/client.\-c}}
 }
 {\ttfamily \#include \char`\"{}client.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}kmp.\-h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +16,8 @@ void \hyperlink{client_8c_a78c6ed6e74b3ce44da9950931b7d1381}{client\-\_\-destroy
 \begin{DoxyCompactList}\small\item\em client 객체를 삭제하는 함수 \end{DoxyCompactList}\item 
 int \hyperlink{client_8c_ad4090a507b0e578c1a7c4238721e5b49}{client\-\_\-process\-\_\-data} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
 \begin{DoxyCompactList}\small\item\em server로 요청을 보내서 응답을 받는 함수 \end{DoxyCompactList}\item 
+int \hyperlink{client_8c_ac250e5300baf1d8be6312f9706cfb939}{client\-\_\-conn} (\hyperlink{structclient__t}{client\-\_\-t} $\ast$client)
+\item 
 int \hyperlink{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
@@ -48,7 +51,18 @@ src file descriptor가 연결되어 있는지 확인
 \end{DoxyParams}
 
 
-Definition at line 36 of file client.\-c.
+Definition at line 37 of file client.\-c.
+
+\hypertarget{client_8c_ac250e5300baf1d8be6312f9706cfb939}{\index{client.\-c@{client.\-c}!client\-\_\-conn@{client\-\_\-conn}}
+\index{client\-\_\-conn@{client\-\_\-conn}!client.c@{client.\-c}}
+\subsubsection[{client\-\_\-conn}]{\setlength{\rightskip}{0pt plus 5cm}int client\-\_\-conn (
+\begin{DoxyParamCaption}
+\item[{{\bf client\-\_\-t} $\ast$}]{client}
+\end{DoxyParamCaption}
+)}}\label{client_8c_ac250e5300baf1d8be6312f9706cfb939}
+
+
+Definition at line 238 of file client.\-c.
 
 \hypertarget{client_8c_a78c6ed6e74b3ce44da9950931b7d1381}{\index{client.\-c@{client.\-c}!client\-\_\-destroy@{client\-\_\-destroy}}
 \index{client\-\_\-destroy@{client\-\_\-destroy}!client.c@{client.\-c}}
@@ -68,7 +82,7 @@ client 객체를 삭제하는 함수
 \end{DoxyParams}
 
 
-Definition at line 135 of file client.\-c.
+Definition at line 143 of file client.\-c.
 
 \hypertarget{client_8c_a0e2f6e89666d4354352c6ea76499a8b5}{\index{client.\-c@{client.\-c}!client\-\_\-init@{client\-\_\-init}}
 \index{client\-\_\-init@{client\-\_\-init}!client.c@{client.\-c}}
@@ -91,7 +105,7 @@ client 객체를 생성하고 초기화하는 함수
 \end{DoxyParams}
 
 
-Definition at line 53 of file client.\-c.
+Definition at line 54 of file client.\-c.
 
 \hypertarget{client_8c_ad4090a507b0e578c1a7c4238721e5b49}{\index{client.\-c@{client.\-c}!client\-\_\-process\-\_\-data@{client\-\_\-process\-\_\-data}}
 \index{client\-\_\-process\-\_\-data@{client\-\_\-process\-\_\-data}!client.c@{client.\-c}}
@@ -114,7 +128,7 @@ int
 \end{DoxyParams}
 
 
-Definition at line 149 of file client.\-c.
+Definition at line 157 of file client.\-c.
 
 \hypertarget{client_8c_a2d85dd2fe45f4f57f0e4d1a1b150ed7a}{\index{client.\-c@{client.\-c}!client\-\_\-set\-\_\-fd\-\_\-nonblock@{client\-\_\-set\-\_\-fd\-\_\-nonblock}}
 \index{client\-\_\-set\-\_\-fd\-\_\-nonblock@{client\-\_\-set\-\_\-fd\-\_\-nonblock}!client.c@{client.\-c}}
@@ -137,7 +151,7 @@ file descriptor를 block되지 않게(비동기로) 설정하는 함수
 \end{DoxyParams}
 
 
-Definition at line 14 of file client.\-c.
+Definition at line 15 of file client.\-c.
 
 \hypertarget{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{client.\-c@{client.\-c}!main@{main}}
 \index{main@{main}!client.c@{client.\-c}}
@@ -149,7 +163,7 @@ Definition at line 14 of file client.\-c.
 )}}\label{client_8c_a3c04138a5bfe5d72780bb7e82a18e627}
 
 
-Definition at line 233 of file client.\-c.
+Definition at line 298 of file client.\-c.
 
 
 
@@ -159,12 +173,12 @@ Definition at line 233 of file client.\-c.
 \subsubsection[{is\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-error = false\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_a47cbb52f2f97a96e635e9588be8c6307}
 
 
-Definition at line 4 of file client.\-c.
+Definition at line 5 of file client.\-c.
 
 \hypertarget{client_8c_aacccc8ccb119dbbedc790f454228ae96}{\index{client.\-c@{client.\-c}!is\-\_\-finish@{is\-\_\-finish}}
 \index{is\-\_\-finish@{is\-\_\-finish}!client.c@{client.\-c}}
 \subsubsection[{is\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}int is\-\_\-finish = false\hspace{0.3cm}{\ttfamily [static]}}}\label{client_8c_aacccc8ccb119dbbedc790f454228ae96}
 
 
-Definition at line 3 of file client.\-c.
+Definition at line 4 of file client.\-c.
 

@@ -5,12 +5,22 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static void \hyperlink{server_8c_aaf124842c1334e95cd4d522df6c475e9}{server\-\_\-transc\-\_\-clear} (\hyperlink{structtransc__t}{transc\-\_\-t} $\ast$transc)
+\begin{DoxyCompactList}\small\item\em transc 구조체 객체를 초기화하는 함수 \end{DoxyCompactList}\item 
+static uint32\-\_\-t \hyperlink{server_8c_a3369df2cc5d1f5f11b41d93a7b8ef0df}{server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length} (\hyperlink{structtransc__t}{transc\-\_\-t} $\ast$transc)
+\begin{DoxyCompactList}\small\item\em 전달받은 메시지를 일부만 decode해서 메시지의 총 길이(Header + Body)를 구하는 함수 \end{DoxyCompactList}\item 
+static int \hyperlink{server_8c_ae8ec3aa2518356314d69132e819d02fa}{server\-\_\-recv\-\_\-data} (\hyperlink{structtransc__t}{transc\-\_\-t} $\ast$transc, int fd)
+\begin{DoxyCompactList}\small\item\em client 가 server로 데이터를 보낼 때, server에서 user copy로 수신하기 위한 함수 \end{DoxyCompactList}\item 
+static int \hyperlink{server_8c_af25f5213cda8c42c84425283c8b7f159}{server\-\_\-send\-\_\-data} (\hyperlink{structtransc__t}{transc\-\_\-t} $\ast$transc, int fd)
+\begin{DoxyCompactList}\small\item\em Server가 Client로 데이터를 보낼 때, Server 에서 zero copy로 송신하기 위한 함수 \end{DoxyCompactList}\item 
 static int \hyperlink{server_8c_af12fdbdbdf6c6317fcb3ad39f7f18ae9}{server\-\_\-set\-\_\-fd\-\_\-nonblock} (int fd)
 \begin{DoxyCompactList}\small\item\em file descriptor를 block되지 않게(비동기로) 설정하는 함수 \end{DoxyCompactList}\item 
 static int \hyperlink{server_8c_a3b4132d66fe79d7ef9c255c7290e03ba}{server\-\_\-check\-\_\-fd} (int fd)
 \begin{DoxyCompactList}\small\item\em src file descriptor가 연결되어 있는지 확인 \end{DoxyCompactList}\item 
 static int \hyperlink{server_8c_af8c24ee00f1295fb4e099c03c1470e73}{server\-\_\-process\-\_\-data} (\hyperlink{structserver__t}{server\-\_\-t} $\ast$server, int fd)
 \begin{DoxyCompactList}\small\item\em Server가 Client로 데이터를 보낼 때, Server에서 메시지 송수신을 처리하기 위한 함수 \end{DoxyCompactList}\item 
+static void $\ast$ \hyperlink{server_8c_aa542370d5789189df5c407e0f4c5ff6f}{server\-\_\-detect\-\_\-finish} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Server에서 사용하는 메모리를 해제하기 위한 함수 \end{DoxyCompactList}\item 
 \hyperlink{structserver__t}{server\-\_\-t} $\ast$ \hyperlink{server_8c_a326fafe4198481223d2abb46ed9ccadb}{server\-\_\-init} (char $\ast$$\ast$argv)
 \begin{DoxyCompactList}\small\item\em server 객체를 생성하고 초기화하는 함수 \end{DoxyCompactList}\item 
 void \hyperlink{server_8c_a247d4c50ac76fb272765ba165fd5dba5}{server\-\_\-destroy} (\hyperlink{structserver__t}{server\-\_\-t} $\ast$server)
@@ -65,7 +75,7 @@ int
 \end{DoxyParams}
 
 
-Definition at line 282 of file server.\-c.
+Definition at line 620 of file server.\-c.
 
 \hypertarget{server_8c_a3b4132d66fe79d7ef9c255c7290e03ba}{\index{server.\-c@{server.\-c}!server\-\_\-check\-\_\-fd@{server\-\_\-check\-\_\-fd}}
 \index{server\-\_\-check\-\_\-fd@{server\-\_\-check\-\_\-fd}!server.c@{server.\-c}}
@@ -88,7 +98,7 @@ src file descriptor가 연결되어 있는지 확인
 \end{DoxyParams}
 
 
-Definition at line 38 of file server.\-c.
+Definition at line 317 of file server.\-c.
 
 \hypertarget{server_8c_a7fc8deb0531c1fb93fa54e3ce66c885e}{\index{server.\-c@{server.\-c}!server\-\_\-conn@{server\-\_\-conn}}
 \index{server\-\_\-conn@{server\-\_\-conn}!server.c@{server.\-c}}
@@ -111,7 +121,7 @@ client와 정상 연결 여부
 \end{DoxyParams}
 
 
-Definition at line 227 of file server.\-c.
+Definition at line 547 of file server.\-c.
 
 \hypertarget{server_8c_a247d4c50ac76fb272765ba165fd5dba5}{\index{server.\-c@{server.\-c}!server\-\_\-destroy@{server\-\_\-destroy}}
 \index{server\-\_\-destroy@{server\-\_\-destroy}!server.c@{server.\-c}}
@@ -134,7 +144,30 @@ void
 \end{DoxyParams}
 
 
-Definition at line 206 of file server.\-c.
+Definition at line 526 of file server.\-c.
+
+\hypertarget{server_8c_aa542370d5789189df5c407e0f4c5ff6f}{\index{server.\-c@{server.\-c}!server\-\_\-detect\-\_\-finish@{server\-\_\-detect\-\_\-finish}}
+\index{server\-\_\-detect\-\_\-finish@{server\-\_\-detect\-\_\-finish}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-detect\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}static void $\ast$ server\-\_\-detect\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_aa542370d5789189df5c407e0f4c5ff6f}
+
+
+Server에서 사용하는 메모리를 해제하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Thread 매개변수, 현재 사용되는(할당된) Server 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 406 of file server.\-c.
 
 \hypertarget{server_8c_a326fafe4198481223d2abb46ed9ccadb}{\index{server.\-c@{server.\-c}!server\-\_\-init@{server\-\_\-init}}
 \index{server\-\_\-init@{server\-\_\-init}!server.c@{server.\-c}}
@@ -157,7 +190,7 @@ server 객체를 생성하고 초기화하는 함수
 \end{DoxyParams}
 
 
-Definition at line 119 of file server.\-c.
+Definition at line 430 of file server.\-c.
 
 \hypertarget{server_8c_af8c24ee00f1295fb4e099c03c1470e73}{\index{server.\-c@{server.\-c}!server\-\_\-process\-\_\-data@{server\-\_\-process\-\_\-data}}
 \index{server\-\_\-process\-\_\-data@{server\-\_\-process\-\_\-data}!server.c@{server.\-c}}
@@ -183,7 +216,59 @@ Server가 Client로 데이터를 보낼 때, Server에서 메시지 송수신을
 \end{DoxyParams}
 
 
-Definition at line 54 of file server.\-c.
+Definition at line 333 of file server.\-c.
+
+\hypertarget{server_8c_ae8ec3aa2518356314d69132e819d02fa}{\index{server.\-c@{server.\-c}!server\-\_\-recv\-\_\-data@{server\-\_\-recv\-\_\-data}}
+\index{server\-\_\-recv\-\_\-data@{server\-\_\-recv\-\_\-data}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-recv\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static int server\-\_\-recv\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf transc\-\_\-t} $\ast$}]{transc, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_ae8ec3aa2518356314d69132e819d02fa}
+
+
+client 가 server로 데이터를 보낼 때, server에서 user copy로 수신하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+열거형 참고 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em transc} & user copy 처리를 위한 \hyperlink{structtransc__t}{transc\-\_\-t} 객체 \\
+\hline
+{\em fd} & 연결된 client file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file server.\-c.
+
+\hypertarget{server_8c_af25f5213cda8c42c84425283c8b7f159}{\index{server.\-c@{server.\-c}!server\-\_\-send\-\_\-data@{server\-\_\-send\-\_\-data}}
+\index{server\-\_\-send\-\_\-data@{server\-\_\-send\-\_\-data}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-send\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static int server\-\_\-send\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf transc\-\_\-t} $\ast$}]{transc, }
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_af25f5213cda8c42c84425283c8b7f159}
+
+
+Server가 Client로 데이터를 보낼 때, Server 에서 zero copy로 송신하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+열거형 참고 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em transc} & user copy 처리를 위한 \hyperlink{structtransc__t}{transc\-\_\-t} 객체 \\
+\hline
+{\em fd} & 연결된 client file descriptor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file server.\-c.
 
 \hypertarget{server_8c_af12fdbdbdf6c6317fcb3ad39f7f18ae9}{\index{server.\-c@{server.\-c}!server\-\_\-set\-\_\-fd\-\_\-nonblock@{server\-\_\-set\-\_\-fd\-\_\-nonblock}}
 \index{server\-\_\-set\-\_\-fd\-\_\-nonblock@{server\-\_\-set\-\_\-fd\-\_\-nonblock}!server.c@{server.\-c}}
@@ -206,7 +291,53 @@ file descriptor를 block되지 않게(비동기로) 설정하는 함수
 \end{DoxyParams}
 
 
+Definition at line 295 of file server.\-c.
+
+\hypertarget{server_8c_aaf124842c1334e95cd4d522df6c475e9}{\index{server.\-c@{server.\-c}!server\-\_\-transc\-\_\-clear@{server\-\_\-transc\-\_\-clear}}
+\index{server\-\_\-transc\-\_\-clear@{server\-\_\-transc\-\_\-clear}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-transc\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}static void server\-\_\-transc\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf transc\-\_\-t} $\ast$}]{transc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_aaf124842c1334e95cd4d522df6c475e9}
+
+
+transc 구조체 객체를 초기화하는 함수 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em transc} & 초기화하기 위한 \hyperlink{structtransc__t}{transc\-\_\-t} 구조체 변수 \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 16 of file server.\-c.
+
+\hypertarget{server_8c_a3369df2cc5d1f5f11b41d93a7b8ef0df}{\index{server.\-c@{server.\-c}!server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length@{server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length}}
+\index{server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length@{server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length}!server.c@{server.\-c}}
+\subsubsection[{server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t server\-\_\-transc\-\_\-get\-\_\-msg\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{{\bf transc\-\_\-t} $\ast$}]{transc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{server_8c_a3369df2cc5d1f5f11b41d93a7b8ef0df}
+
+
+전달받은 메시지를 일부만 decode해서 메시지의 총 길이(Header + Body)를 구하는 함수 
+
+\begin{DoxyReturn}{Returns}
+메시지 길이 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em transc} & 메시지의 길이를 구하기 위한 \hyperlink{structtransc__t}{transc\-\_\-t} 구조체 변수 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file server.\-c.
 
 
 

@@ -1,0 +1,183 @@
+\hypertarget{kmp_8h}{\section{C\-L\-I\-E\-N\-T/kmp.h File Reference}
+\label{kmp_8h}\index{C\-L\-I\-E\-N\-T/kmp.\-h@{C\-L\-I\-E\-N\-T/kmp.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkmp__hdr__s}{kmp\-\_\-hdr\-\_\-s}
+\item 
+struct \hyperlink{structkmp__s}{kmp\-\_\-s}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{kmp_8h_af70c1ad7701548b8ca28caa20f32346d}{\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{kmp_8h_ab377b2c7e1ef521373a74f4200644495}{D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}~1024
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned short \hyperlink{kmp_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}
+\item 
+typedef struct \hyperlink{structkmp__hdr__s}{kmp\-\_\-hdr\-\_\-s} \hyperlink{kmp_8h_a8e646683edecd2e8e69b3a6511c59286}{kmp\-\_\-hdr\-\_\-t}
+\item 
+typedef struct \hyperlink{structkmp__s}{kmp\-\_\-s} \hyperlink{kmp_8h_aa64e439c7b269d4e81966c6c513f9095}{kmp\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$ \hyperlink{kmp_8h_a77c3a322acba9492cbbc52c441127040}{kmp\-\_\-init} ()
+\item 
+void \hyperlink{kmp_8h_a3d4fbe371f7a72ae5ccd1262126bac84}{kmp\-\_\-destroy} (\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em 프로토콜 메시지 객체를 삭제하기 위한 함수 \end{DoxyCompactList}\item 
+int \hyperlink{kmp_8h_afa887f48ea19209ccd7a677b5ae5ff08}{kmp\-\_\-get\-\_\-msg\-\_\-length} (\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$msg)
+\item 
+char $\ast$ \hyperlink{kmp_8h_a25d74946e19029642309622cf60f59a5}{kmp\-\_\-get\-\_\-data} (\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$msg)
+\item 
+int \hyperlink{kmp_8h_a4a89fd40e9f687ba820ecd75202852f7}{kmp\-\_\-set\-\_\-msg} (\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$msg, uint8\-\_\-t version, char $\ast$data, uint32\-\_\-t code)
+\item 
+void \hyperlink{kmp_8h_ad479735576042074c3277bbcf1252809}{kmp\-\_\-print\-\_\-msg} (\hyperlink{structkmp__t}{kmp\-\_\-t} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em 프로토콜 메시지 전체를 출력하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{kmp_8h_af70c1ad7701548b8ca28caa20f32346d}{\index{kmp.\-h@{kmp.\-h}!\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-@{\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-@{\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-}!kmp.h@{kmp.\-h}}
+\subsubsection[{\-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-K\-M\-P\-\_\-\-H\-\_\-\-\_\-}}\label{kmp_8h_af70c1ad7701548b8ca28caa20f32346d}
+
+
+Definition at line 4 of file kmp.\-h.
+
+\hypertarget{kmp_8h_ab377b2c7e1ef521373a74f4200644495}{\index{kmp.\-h@{kmp.\-h}!D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N@{D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}}
+\index{D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N@{D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}!kmp.h@{kmp.\-h}}
+\subsubsection[{D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N~1024}}\label{kmp_8h_ab377b2c7e1ef521373a74f4200644495}
+
+
+Definition at line 12 of file kmp.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{kmp_8h_a8e646683edecd2e8e69b3a6511c59286}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-hdr\-\_\-t@{kmp\-\_\-hdr\-\_\-t}}
+\index{kmp\-\_\-hdr\-\_\-t@{kmp\-\_\-hdr\-\_\-t}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-hdr\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf kmp\-\_\-hdr\-\_\-s} {\bf kmp\-\_\-hdr\-\_\-t}}}\label{kmp_8h_a8e646683edecd2e8e69b3a6511c59286}
+
+
+Definition at line 18 of file kmp.\-h.
+
+\hypertarget{kmp_8h_aa64e439c7b269d4e81966c6c513f9095}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-t@{kmp\-\_\-t}}
+\index{kmp\-\_\-t@{kmp\-\_\-t}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf kmp\-\_\-s} {\bf kmp\-\_\-t}}}\label{kmp_8h_aa64e439c7b269d4e81966c6c513f9095}
+
+
+Definition at line 38 of file kmp.\-h.
+
+\hypertarget{kmp_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{\index{kmp.\-h@{kmp.\-h}!ushort@{ushort}}
+\index{ushort@{ushort}!kmp.h@{kmp.\-h}}
+\subsubsection[{ushort}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf ushort}}}\label{kmp_8h_ab95f123a6c9bcfee6a343170ef8c5f69}
+
+
+Definition at line 14 of file kmp.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{kmp_8h_a3d4fbe371f7a72ae5ccd1262126bac84}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-destroy@{kmp\-\_\-destroy}}
+\index{kmp\-\_\-destroy@{kmp\-\_\-destroy}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void kmp\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf kmp\-\_\-t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_a3d4fbe371f7a72ae5ccd1262126bac84}
+
+
+프로토콜 메시지 객체를 삭제하기 위한 함수 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & 삭제할 프로토콜 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file kmp.\-c.
+
+\hypertarget{kmp_8h_a25d74946e19029642309622cf60f59a5}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-get\-\_\-data@{kmp\-\_\-get\-\_\-data}}
+\index{kmp\-\_\-get\-\_\-data@{kmp\-\_\-get\-\_\-data}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-get\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ kmp\-\_\-get\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf kmp\-\_\-t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_a25d74946e19029642309622cf60f59a5}
+
+
+Definition at line 37 of file kmp.\-c.
+
+\hypertarget{kmp_8h_afa887f48ea19209ccd7a677b5ae5ff08}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-get\-\_\-msg\-\_\-length@{kmp\-\_\-get\-\_\-msg\-\_\-length}}
+\index{kmp\-\_\-get\-\_\-msg\-\_\-length@{kmp\-\_\-get\-\_\-msg\-\_\-length}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-get\-\_\-msg\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}int kmp\-\_\-get\-\_\-msg\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{{\bf kmp\-\_\-t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_afa887f48ea19209ccd7a677b5ae5ff08}
+
+
+Definition at line 27 of file kmp.\-c.
+
+\hypertarget{kmp_8h_a77c3a322acba9492cbbc52c441127040}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-init@{kmp\-\_\-init}}
+\index{kmp\-\_\-init@{kmp\-\_\-init}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kmp\-\_\-t}$\ast$ kmp\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_a77c3a322acba9492cbbc52c441127040}
+
+
+Definition at line 8 of file kmp.\-c.
+
+\hypertarget{kmp_8h_ad479735576042074c3277bbcf1252809}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-print\-\_\-msg@{kmp\-\_\-print\-\_\-msg}}
+\index{kmp\-\_\-print\-\_\-msg@{kmp\-\_\-print\-\_\-msg}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-print\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void kmp\-\_\-print\-\_\-msg (
+\begin{DoxyParamCaption}
+\item[{{\bf kmp\-\_\-t} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_ad479735576042074c3277bbcf1252809}
+
+
+프로토콜 메시지 전체를 출력하는 함수 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & 출력하려는 메시지의 객체 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file kmp.\-c.
+
+\hypertarget{kmp_8h_a4a89fd40e9f687ba820ecd75202852f7}{\index{kmp.\-h@{kmp.\-h}!kmp\-\_\-set\-\_\-msg@{kmp\-\_\-set\-\_\-msg}}
+\index{kmp\-\_\-set\-\_\-msg@{kmp\-\_\-set\-\_\-msg}!kmp.h@{kmp.\-h}}
+\subsubsection[{kmp\-\_\-set\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}int kmp\-\_\-set\-\_\-msg (
+\begin{DoxyParamCaption}
+\item[{{\bf kmp\-\_\-t} $\ast$}]{msg, }
+\item[{uint8\-\_\-t}]{version, }
+\item[{char $\ast$}]{data, }
+\item[{uint32\-\_\-t}]{code}
+\end{DoxyParamCaption}
+)}}\label{kmp_8h_a4a89fd40e9f687ba820ecd75202852f7}
+
+
+Definition at line 50 of file kmp.\-c.
+

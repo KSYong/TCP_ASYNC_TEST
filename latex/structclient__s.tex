@@ -12,6 +12,8 @@ int \hyperlink{structclient__s_a9babf0c4dea4b555e6b87a47f4ca98cd}{fd}
 \begin{DoxyCompactList}\small\item\em client tcp socket file descriptor \end{DoxyCompactList}\item 
 struct sockaddr\-\_\-in \hyperlink{structclient__s_a0462afe1661e70a0c69fa24f39387d0f}{addr}
 \begin{DoxyCompactList}\small\item\em client socket address \end{DoxyCompactList}\item 
+struct sockaddr\-\_\-in \hyperlink{structclient__s_a4cb8f28435762b205424d16ea39dcab3}{server\-\_\-addr}
+\begin{DoxyCompactList}\small\item\em server socket address \end{DoxyCompactList}\item 
 int \hyperlink{structclient__s_aadebb75dc03b9055f20d18e6a78865c4}{epoll\-\_\-handle\-\_\-fd}
 \begin{DoxyCompactList}\small\item\em client epoll handle file descriptor \end{DoxyCompactList}\item 
 struct epoll\-\_\-event \hyperlink{structclient__s_a06588602dcf6728b79196b73271edf97}{events} \mbox{[}\hyperlink{client_8h_aae114cdd7784a59af222f175dac6312b}{B\-U\-F\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N}\mbox{]}
@@ -46,7 +48,7 @@ client epoll handle file descriptor
 
 
 
-Definition at line 33 of file client.\-h.
+Definition at line 35 of file client.\-h.
 
 \hypertarget{structclient__s_a06588602dcf6728b79196b73271edf97}{\index{client\-\_\-s@{client\-\_\-s}!events@{events}}
 \index{events@{events}!client_s@{client\-\_\-s}}
@@ -57,7 +59,7 @@ client epoll event management structure
 
 
 
-Definition at line 35 of file client.\-h.
+Definition at line 37 of file client.\-h.
 
 \hypertarget{structclient__s_a9babf0c4dea4b555e6b87a47f4ca98cd}{\index{client\-\_\-s@{client\-\_\-s}!fd@{fd}}
 \index{fd@{fd}!client_s@{client\-\_\-s}}
@@ -69,6 +71,17 @@ client tcp socket file descriptor
 
 
 Definition at line 29 of file client.\-h.
+
+\hypertarget{structclient__s_a4cb8f28435762b205424d16ea39dcab3}{\index{client\-\_\-s@{client\-\_\-s}!server\-\_\-addr@{server\-\_\-addr}}
+\index{server\-\_\-addr@{server\-\_\-addr}!client_s@{client\-\_\-s}}
+\subsubsection[{server\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\-\_\-in client\-\_\-s\-::server\-\_\-addr}}\label{structclient__s_a4cb8f28435762b205424d16ea39dcab3}
+
+
+server socket address 
+
+
+
+Definition at line 33 of file client.\-h.
 
 
 

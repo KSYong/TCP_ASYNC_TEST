@@ -26,9 +26,11 @@
 typedef struct client_s client_t;
 struct client_s{
 	/// client tcp socket file descriptor
-	int fd;
+int fd;
 	/// client socket address
 	struct sockaddr_in addr;
+        /// server socket address
+        struct sockaddr_in server_addr;
 	/// client epoll handle file descriptor
 	int epoll_handle_fd;
 	/// client epoll event management structure

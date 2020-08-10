@@ -1,0 +1,116 @@
+\hypertarget{structkmp__hdr__s}{\section{kmp\-\_\-hdr\-\_\-s Struct Reference}
+\label{structkmp__hdr__s}\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}}
+}
+
+
+{\ttfamily \#include $<$kmp.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{structkmp__hdr__s_a776ad75facaebe9caa19d9d08295d2a9}{version}
+\begin{DoxyCompactList}\small\item\em message protocol version \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{structkmp__hdr__s_a2c434e6d127228ecf717e5a89ceb385f}{length}\-:24
+\begin{DoxyCompactList}\small\item\em message header + body length \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{structkmp__hdr__s_a9fb7d6b15240a2819ecf1bb5f8a9188f}{flag}
+\begin{DoxyCompactList}\small\item\em message flag \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{structkmp__hdr__s_a02a4618b60f6e9f6be45c18bc1b99503}{code}\-:24
+\begin{DoxyCompactList}\small\item\em message command code \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{structkmp__hdr__s_a3aa529d8b4693f2ae937ce94ac0bf560}{app\-\_\-id}
+\begin{DoxyCompactList}\small\item\em message application id \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{structkmp__hdr__s_a0b3186d9e096e3e599a0a96329ccc091}{hop\-\_\-id}
+\begin{DoxyCompactList}\small\item\em message hop-\/by-\/hop identifier \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{structkmp__hdr__s_a58745a4198eb8e139e3597b2f71ef5ab}{end\-\_\-id}
+\begin{DoxyCompactList}\small\item\em message end-\/to-\/end identifier \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file kmp.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structkmp__hdr__s_a3aa529d8b4693f2ae937ce94ac0bf560}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!app\-\_\-id@{app\-\_\-id}}
+\index{app\-\_\-id@{app\-\_\-id}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{app\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t kmp\-\_\-hdr\-\_\-s\-::app\-\_\-id}}\label{structkmp__hdr__s_a3aa529d8b4693f2ae937ce94ac0bf560}
+
+
+message application id 
+
+
+
+Definition at line 29 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a02a4618b60f6e9f6be45c18bc1b99503}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!code@{code}}
+\index{code@{code}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t kmp\-\_\-hdr\-\_\-s\-::code}}\label{structkmp__hdr__s_a02a4618b60f6e9f6be45c18bc1b99503}
+
+
+message command code 
+
+
+
+Definition at line 27 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a58745a4198eb8e139e3597b2f71ef5ab}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!end\-\_\-id@{end\-\_\-id}}
+\index{end\-\_\-id@{end\-\_\-id}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{end\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t kmp\-\_\-hdr\-\_\-s\-::end\-\_\-id}}\label{structkmp__hdr__s_a58745a4198eb8e139e3597b2f71ef5ab}
+
+
+message end-\/to-\/end identifier 
+
+
+
+Definition at line 33 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a9fb7d6b15240a2819ecf1bb5f8a9188f}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!flag@{flag}}
+\index{flag@{flag}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t kmp\-\_\-hdr\-\_\-s\-::flag}}\label{structkmp__hdr__s_a9fb7d6b15240a2819ecf1bb5f8a9188f}
+
+
+message flag 
+
+
+
+Definition at line 25 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a0b3186d9e096e3e599a0a96329ccc091}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!hop\-\_\-id@{hop\-\_\-id}}
+\index{hop\-\_\-id@{hop\-\_\-id}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{hop\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t kmp\-\_\-hdr\-\_\-s\-::hop\-\_\-id}}\label{structkmp__hdr__s_a0b3186d9e096e3e599a0a96329ccc091}
+
+
+message hop-\/by-\/hop identifier 
+
+
+
+Definition at line 31 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a2c434e6d127228ecf717e5a89ceb385f}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!length@{length}}
+\index{length@{length}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t kmp\-\_\-hdr\-\_\-s\-::length}}\label{structkmp__hdr__s_a2c434e6d127228ecf717e5a89ceb385f}
+
+
+message header + body length 
+
+
+
+Definition at line 23 of file kmp.\-h.
+
+\hypertarget{structkmp__hdr__s_a776ad75facaebe9caa19d9d08295d2a9}{\index{kmp\-\_\-hdr\-\_\-s@{kmp\-\_\-hdr\-\_\-s}!version@{version}}
+\index{version@{version}!kmp_hdr_s@{kmp\-\_\-hdr\-\_\-s}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t kmp\-\_\-hdr\-\_\-s\-::version}}\label{structkmp__hdr__s_a776ad75facaebe9caa19d9d08295d2a9}
+
+
+message protocol version 
+
+
+
+Definition at line 21 of file kmp.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-L\-I\-E\-N\-T/\hyperlink{kmp_8h}{kmp.\-h}\end{DoxyCompactItemize}
